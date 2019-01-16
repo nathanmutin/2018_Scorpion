@@ -1,25 +1,18 @@
 /*
  * Pince.cpp
  *
- *  Created on: 11 févr. 2018
+ *  Created on: 11 fï¿½vr. 2018
  *      Author: REBAUDET Thomas
  */
 
 #include <iostream>
-#include <Pince.h>
-#include <Definitions.h>
+#include <frc/WPILib.h>
 
-#include <VictorSP.h>
-#include <PWMVictorSPX.h>
-#include "WPILib.h"
-#include <DigitalInput.h>
-#include <Joystick.h>
-#include <Encoder.h>
-#include <Servo.h>
-#include <DoubleSolenoid.h>
+#include "Pince.h"
+#include "Definitions.h"
 
+using namespace frc;
 
-namespace rbl {
 
 Pince::Pince()
 {
@@ -254,6 +247,4 @@ Pince::~Pince()
 	delete Pivot;
 	delete Encodeur;
 	delete Verin;
-}
-
 }

@@ -1,20 +1,18 @@
 /*
  * BaseRoulante.cpp
  *
- *  Created on: 16 févr. 2018
+ *  Created on: 16 fï¿½vr. 2018
  *      Author: Nathan
  */
 
-#include <BaseRoulante.h>
-#include <Definitions.h>
-#include "WPILib.h"
-#include <Joystick.h>
-#include <PWMVictorSPX.h>
-#include <Encoder.h>
 #include <iostream>
+#include <frc/WPILib.h>
 
-namespace rbl
-{
+#include "BaseRoulante.h"
+#include "Definitions.h"
+
+using namespace frc;
+
 
 BaseRoulante::BaseRoulante()
 {
@@ -41,7 +39,7 @@ BaseRoulante::BaseRoulante()
 	kIAvancer = 0.0000045;
 	kDAvancer = 0.05;
 
-	kPRotation = 0.075; //0.050 pour cotés et 0.075 pour milieu
+	kPRotation = 0.075; //0.050 pour cotï¿½s et 0.075 pour milieu
 	kIRotation = 0.00003;
 	kDRotation = 0.28;
 }
@@ -93,7 +91,7 @@ void BaseRoulante::deplacer(Joystick* joystick)
 
 void BaseRoulante::changerVitesse(bool etatGachette)
 {
-	if(etatGachette && !etatPrecedentGachette) //Si la gachette est appuyée et qu'elle ne l'etait pas avant
+	if(etatGachette && !etatPrecedentGachette) //Si la gachette est appuyï¿½e et qu'elle ne l'etait pas avant
 	{
 		if (vitesseBallShifter)
 		{
@@ -112,7 +110,7 @@ void BaseRoulante::changerVitesse(bool etatGachette)
 
 		etatPrecedentGachette = true;
 	}
-	else if (!etatGachette) //Si la gachette n'est pas appuyées
+	else if (!etatGachette) //Si la gachette n'est pas appuyï¿½es
 	{
 		etatPrecedentGachette = false;
 	}
@@ -168,7 +166,7 @@ double BaseRoulante::rotation(const int angle_consigne)
 
 	erreurPrecedente = erreur;
 
-	return erreur; // Erreur en degrés
+	return erreur; // Erreur en degrï¿½s
 }
 
 void BaseRoulante::resetPID()
@@ -208,6 +206,4 @@ BaseRoulante::~BaseRoulante()
 	delete EncodeurDroit;
 	delete EncodeurGauche;
 	delete Gyro;
-}
-
 }

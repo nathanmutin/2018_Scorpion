@@ -1,20 +1,18 @@
 /*
  * BaseRoulante.h
  *
- *  Created on: 16 févr. 2018
+ *  Created on: 16 fï¿½vr. 2018
  *      Author: Nathan
  */
 
 #ifndef SRC_BASEROULANTE_H_
 #define SRC_BASEROULANTE_H_
-#include "WPILib.h"
-#include <Joystick.h>
-#include <VictorSP.h>
-#include <Encoder.h>
+
+#include <frc/WPILib.h>
 #include <iostream>
 
-namespace rbl
-{
+using namespace frc;
+
 
 class BaseRoulante
 {
@@ -27,7 +25,7 @@ public:
 	void deplacer(Joystick* joystick);
 	void changerVitesse(bool etatGachette);
 
-	//Fonctions periode auto qui retournent l'erreur du PID en cm et en degrés
+	//Fonctions periode auto qui retournent l'erreur du PID en cm et en degrï¿½s
 	double parcourir_distance(int distance_a_parcourir);
 	double rotation(const int angle_consigne);
 
@@ -63,6 +61,5 @@ public:
 	bool vitesseBallShifter, etatPrecedentGachette;
 };
 
-}
 
 #endif /* SRC_BASEROULANTE_H_ */

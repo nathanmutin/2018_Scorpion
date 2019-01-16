@@ -1,20 +1,18 @@
 /*
  * Pince.h
  *
- *  Created on: 11 févr. 2018
+ *  Created on: 11 fï¿½vr. 2018
  *      Author: REBAUDET Thomas
  */
 
 #ifndef SRC_PINCE_H_
 #define SRC_PINCE_H_
-#include <VictorSP.h>
-#include <PWMVictorSPX.h>
-#include "WPILib.h"
-#include <DigitalInput.h>
-#include <Encoder.h>
-#include <Servo.h>
 
-namespace rbl {
+#include <frc/WPILib.h>
+#include <iostream>
+
+using namespace frc;
+
 
 class Pince {
 public:
@@ -58,6 +56,5 @@ public:
 	double vitesse, consigne, positionBras, erreur, sommeErreurs, differenceErreurs, erreurPrecedente;
 };
 
-}
 
 #endif /* SRC_PINCE_H_ */
